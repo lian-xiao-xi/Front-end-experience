@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符点点点loading加载效果</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.428;
+        }
+        .btn {
+            display: inline-block;
+            padding: .3em 1.25em;
+            border: 1px solid;
+            border-color: #208000 #1F7F00;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 -1px #137900;
+            background-color: #289600;
+            box-shadow: inset 0 0 1px rgba(255, 255, 255, .6), 0 1px #8DBF62;
+            /*vertical-align: bottom;*/
+        }
+
+        .loading {
+            display: inline-block;
+            height: 1em;
+            line-height: 1;
+            font-size: 1.2em;
+            text-align: left;
+            letter-spacing: .15em;
+            vertical-align: text-bottom;
+            overflow: hidden;
+        }
+        .loading::before {
+            display: block;
+            line-height: 1;
+            content: '...\A..\A.';
+            white-space: pre-wrap;
+            animation: loading 3s step-start infinite;
+        }
+        @keyframes loading {
+            0% {transform: translateY(0);}
+            33% {transform: translateY(-2em);}
+            66% {transform: translateY(-1em);}
+            100% {transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">
+        订单提交中
+        <span class="loading">...</span>
+    </button>
+    <a href="http://www.zhangxinxu.com/wordpress/2016/11/css-content-pre-animation-character-loading/" target="_blank">
+    摘自http://www.zhangxinxu.com/wordpress/2016/11/css-content-pre-animation-character-loading/
+    </a>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./base.css">
+  <title>stick-footer-1</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 30px;
+      line-height: 1.5;
+    }
+
+    body,
+    html {
+      height: 100%;
+    }
+
+    .wrap {
+      height: auto;
+      min-height: 100%;
+      margin-bottom: -60px;
+      overflow: auto;
+    }
+
+    .footer,
+    .wrap .push {
+      height: 60px;
+      overflow: hidden;
+    }
+    .footer {
+      clear: both;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap color-ff7d7d">
+    <div class="content clearfix color-fbbb44">
+      <button id="btn" style="display: block;padding: .2em;font: inherit;">显示/隐藏主体内容</button>
+      <h1 style="font-size: inherit;color: red;">这种 stick footer 的方式会增加一个多余的元素：即下面的div.push元素</h1>
+      <div class="content-text">
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+        <p>这里是主体内容</p>
+      </div>
+    </div>
+    <div class="push color-beb1cd"></div>
+  </div>
+  <footer class="footer color-7db9a9">
+    <p>这里是footer</p>
+  </footer>
+</body>
+<script src="./click.js"></script>
+
+</html>

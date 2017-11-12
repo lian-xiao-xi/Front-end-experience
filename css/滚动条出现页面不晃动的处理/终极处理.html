@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚动条出现页面不晃动的终极处理</title>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+         :root {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+         :root body {
+            position: absolute;
+        }
+
+
+        body {
+            width: 100vw;
+            overflow: hidden;
+        }
+
+/*
+* 下面为无关主题的样式
+*/
+        .cont {
+            border: 2px solid red;
+            text-align: center;
+            overflow: hidden;
+            animation: anim-cont 2s infinite alternate;
+        }
+        .img {
+            border: 2px solid lightgreen;
+            width: 660px;
+            height: auto;
+            padding: 15px;
+        }
+
+        @keyframes anim-cont {
+            0% {
+                height: 10vh;
+            }
+            100% {
+                height: 130vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: cadetblue;text-align: center;">滚动条出现页面不晃动的终极处理</h1>
+    <div class="cont">
+        <img src="./源码来源.png" class="img">
+        <p>页面上的元素都不会出现晃动</p>
+        <p>特别适合居中布局。如果是全屏布局，右侧需要留有一定的距离，例如20px，否则可能会出现内容被滚动条覆盖的情况。</p>
+        <a href="http://www.zhangxinxu.com/wordpress/2015/01/css-page-scrollbar-toggle-center-no-jumping/" target="_blank">摘自http://www.zhangxinxu.com/wordpress/2015/01/css-page-scrollbar-toggle-center-no-jumping/</a>
+    </div>
+</body>
+
+</html>

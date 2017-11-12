@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./base.css">
+  <title>stick-footer-5</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* 第一步设置盒子为满屏大小 */
+    body {
+      font-size: 30px;
+      line-height: 2;
+    }
+
+    .wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+    /* 第二步子盒子设置最小高度且清除浮动 给一个padding-bottom 等于footer 避免内容被footer遮盖*/
+
+    .wrap .content {
+      min-height: 100%;
+      padding-bottom: 100px;
+    }
+
+    /* 第三步footer的height和margin-top要相等 */
+
+    .wrap .footer {
+      position: relative;
+      height: 100px;
+      margin-top: -100px;
+      clear: both;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap color-ff7d7d">
+    <div class="content clearfix color-fbbb44">
+      <button id="btn" style="display: block;padding: .2em;font: inherit;">显示/隐藏主体内容</button>
+      <h1 style="font-size: inherit;color: red;">position: fixed 版本</h1>
+
+      <div class="content-text">
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+        <p>这里是内容区域</p>
+
+      </div>
+    </div>
+    <footer class="footer color-7db9a9">这是footer区域</footer>
+  </div>
+</body>
+<script src="./click.js"></script>
+</html>

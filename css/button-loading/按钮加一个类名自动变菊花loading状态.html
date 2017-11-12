@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮加一个类名自动变菊花loading状态</title>
+    <link rel="stylesheet" type="" href="./reset-base.css">
+    <style>
+        /* 按钮 loading */
+        .loading {
+            position: relative;
+        }
+        /* ::first-line 对行内元素无效 */
+        .loading::first-line {
+            color: transparent;
+        }
+        .loading::before {
+            width: 4px;
+            height: 4px;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 100%;
+            animation: spinzoom 1s steps(8) infinite;
+            box-shadow: 0 -10px 0 1px currentColor, 10px 0 currentColor, 0 10px currentColor, -10px 0 currentColor, -7px -7px 0 .5px currentColor, 7px -7px 0 1.5px currentColor, 7px 7px currentColor, -7px 7px currentColor;
+        }
+        @keyframes spinzoom {
+            0% {transform: scale(.75) rotate(0);}
+            100% {transform: scale(.75) rotate(360deg);}
+        }
+        
+    </style>
+</head>
+<body>
+    <button class="loading">文字内容</button>
+    <a href="http://www.zhangxinxu.com/php/microCodeDetail.php?id=5" target="_blank" style="text-decoration: underline;color: blue;">
+    摘自http://www.zhangxinxu.com/php/microCodeDetail.php?id=5
+    </a>
+    <p>按钮添加loading类之后就会展示加载时的loading动画</p>
+</body>
+</html>

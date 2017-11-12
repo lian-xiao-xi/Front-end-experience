@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚动条出现页面不晃动的一般处理</title>
+    <style>
+        .wrap-outer {
+            box-sizing: border-box;
+            padding-left: calc(100vw - 100%);/* 也可以是margin-left: calc(100vw -100%); */
+        }
+        
+/*
+* 下面为无关主题的样式
+*/
+
+        .cont {
+            border: 2px solid red;
+            text-align: center;
+            overflow: hidden;
+            animation: anim-cont 2s infinite alternate;
+        }
+
+        @keyframes anim-cont {
+            0% {
+                height: 10vh;
+            }
+            100% {
+                height: 130vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="background-color: cadetblue;text-align: center;">滚动条出现页面不晃动的一般处理
+            <span style="font-size: 0.5em;font-weight: normal;">这个标题会出现跳动</span>
+        </h1>
+    </div>
+    <div class="wrap-outer cont">
+        <img src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg">
+        <p>我不像标题，我是一个不会晃动的安静的小天使！</p>
+        <a href="http://www.zhangxinxu.com/wordpress/2015/01/css-page-scrollbar-toggle-center-no-jumping/" target="_blank">摘自http://www.zhangxinxu.com/wordpress/2015/01/css-page-scrollbar-toggle-center-no-jumping/</a>
+    </div>
+</body>
+
+</html>
