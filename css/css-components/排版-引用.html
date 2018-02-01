@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排版-引用</title>
+    <link rel="stylesheet" href="reset-base.css" />
+    <style>
+        /*==默认样式==*/
+        p {
+            margin-bottom: 10px;
+        }
+        blockquote {
+            font-size: 1.75rem;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-left: 5px solid #eee;
+        }
+        blockquote p:last-child,
+        blockquote ul:last-child,
+        blockquote ol:last-child {
+            margin-bottom: 0;
+        }
+        blockquote footer,
+        blockquote small,
+        blockquote .small {
+            display: block;
+            font-size: 90%;
+            color: #777;
+            line-height: 1.42857143;
+        }
+        blockquote footer::before,
+        blockquote small::before,
+        blockquote .small::before {
+            content: "\2014 \00A0 "
+        }
+        /*=========默认样式end=========*/
+
+        /*==引用的内容呈现右对齐效果==*/
+        .blockquote-reverse,
+        blockquote.pull-right {
+            padding-right: 20px;
+            padding-left: 0;
+            border-right: 5px solid #eee;
+            border-left: 0 none;
+            text-align: right;
+        }
+        .blockquote-reverse footer::after,
+        .blockquote-reverse small::after,
+        .blockquote-reverse .small::after,
+        blockquote.pull-right footer::after,
+        blockquote.pull-right small::after,
+        blockquote.pull-right .smal::after {
+            content: " \2014 \00A0";
+        }
+        .blockquote-reverse footer::before,
+        .blockquote-reverse small::before,
+        .blockquote-reverse .small::before,
+        blockquote.pull-right footer::before,
+        blockquote.pull-right small::before,
+        blockquote.pull-right .smal::before {
+            content: "";
+        }
+        /*==引用的内容呈现右对齐效果 end==*/
+    </style>
+</head>
+<body>
+<div style="width: 80%;border: 2px solid #000;margin: 0 auto;padding:20px;">
+    <blockquote>
+        <p>Uber（Uber Technologies,Inc.）中文译作“优步”，是一家美国硅谷的科技公司。Uber在2009年，由加利福尼亚大学洛杉矶分校辍学生特拉维斯·卡兰尼克 和好友加雷特·坎普创立。因旗下同名打车APP而名声大噪。Uber目前已经进入中国大陆的60余座城市，并在全球范围内覆盖了70多个国家的400余座城市。</p>
+        <footer>来自百度百科</footer>
+    </blockquote>
+    <blockquote class="blockquote-reverse">
+        <p>Uber（Uber Technologies,Inc.）中文译作“优步”，是一家美国硅谷的科技公司。</p>
+        <footer>来自百度百科</footer>
+    </blockquote>
+</div>
+</body>
+</html>

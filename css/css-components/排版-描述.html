@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排版-描述</title>
+    <link rel="stylesheet" href="reset-base.css">
+    <style>
+        /*===默认的样式===*/
+        dl {
+            margin-bottom: 20px;
+        }
+        dt,
+        dd {
+            line-height: 1.42857143;
+        }
+        dt {
+            font-weight: 700;
+        }
+        dd {
+            /***清除默认的缩进样式***/
+            margin-left: 0;
+        }
+        /*===默认的样式 end===*/
+
+        /*===带列表线的描述===*/
+        .dl-line > dt:nth-child(n+2) {
+          margin-top: 5px;
+          padding-top: 5px;
+          border-top: 1px solid #dddddd;
+        }
+        /*===带列表线的描述 end===*/
+
+        /*===水平排列的描述===*/
+        @media (min-width: 768px) {
+            .dl-horizontal dt {
+                float: left;
+                width: 160px;
+                text-align: right;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                clear: left;
+            }
+            .dl-horizontal dd {
+                margin-left: 180px;
+            }
+        }
+        .dl-horizontal dd::after,
+        .dl-horizontal dd::before {
+            display: table;
+            content: "";
+        }
+        .dl-horizontal dd::after {
+            clear: both;
+        }
+        /*===水平排列的描述 end===*/
+
+    </style>
+</head>
+<body>
+    <div style="width:60%;padding:30px;margin:0 auto;border:2px solid #000;">
+    <dl>
+        <dt>郭艾伦</dt>
+        <dd>中国职业篮球运动员，司职控球后卫。人帅的逼爆。</dd>
+        <dt>科比 布莱恩特</dt>
+        <dd>美国职业篮球运动员，司职得分后卫/小前锋（锋卫摇摆人）。哦，不对，前美职篮运动员...</dd>
+        <dd>这个不需要过多评价。</dd>
+        <dt>迈克尔 乔丹</dt>
+        <dd>历史上最伟大的篮球运动员。NBA篮球名人堂。乔丹是历史上最值钱的体育偶像之一，他是Nike，Gatorade，Hanes，McDonald's和MCI的主要代言人。他在1988年首次出现在Wheaties box的广告上并随即成为了他们的代言人。Nike为乔丹设计的系列签名鞋叫做“Air Jordan”。后来Nike把这条生产线从自己的厂家分出来，专门叫做“乔丹牌”。</dd>
+    </dl>
+    <dl class="dl-line">
+        <dt>郭艾伦</dt>
+        <dd>中国职业篮球运动员，司职控球后卫。人帅的逼爆。</dd>
+        <dt>科比 布莱恩特</dt>
+        <dd>美国职业篮球运动员，司职得分后卫/小前锋（锋卫摇摆人）。哦，不对，前美职篮运动员...</dd>
+        <dd>这个不需要过多评价。</dd>
+        <dt>迈克尔 乔丹</dt>
+        <dd>历史上最伟大的篮球运动员。NBA篮球名人堂。乔丹是历史上最值钱的体育偶像之一，他是Nike，Gatorade，Hanes，McDonald's和MCI的主要代言人。他在1988年首次出现在Wheaties box的广告上并随即成为了他们的代言人。Nike为乔丹设计的系列签名鞋叫做“Air Jordan”。后来Nike把这条生产线从自己的厂家分出来，专门叫做“乔丹牌”。</dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>郭艾伦</dt>
+        <dd>中国职业篮球运动员，司职控球后卫。人帅的逼爆。</dd>
+        <dt>科比 布莱恩特</dt>
+        <dd>美国职业篮球运动员，司职得分后卫/小前锋（锋卫摇摆人）。哦，不对，前美职篮运动员...</dd>
+        <dd>这个不需要过多评价。</dd>
+        <dt>迈克尔 乔丹</dt>
+        <dd>历史上最伟大的篮球运动员。NBA篮球名人堂。乔丹是历史上最值钱的体育偶像之一，他是Nike，Gatorade，Hanes，McDonald's和MCI的主要代言人。他在1988年首次出现在Wheaties box的广告上并随即成为了他们的代言人。Nike为乔丹设计的系列签名鞋叫做“Air Jordan”。后来Nike把这条生产线从自己的厂家分出来，专门叫做“乔丹牌”。</dd>
+    </dl>
+    </div>
+</body>
+</html>

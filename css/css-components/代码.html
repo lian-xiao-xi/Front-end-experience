@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>代码</title>
+    <link rel="stylesheet" href="reset-base.css">
+    <style>
+    code,
+    pre,
+    kbd,
+    samp {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        font-size: 1em;
+    }
+    code {
+        font-size: 90%;
+        font-weight: inherit;
+        color: #c7254e;
+        padding: 2px 4px;
+        background-color: #f9f2f4;
+        border-radius: 4px;
+    }
+    pre code {
+        font-size: inherit;
+        white-space: pre-wrap;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+    kbd {
+        font-size: 90%;
+        font-weight: 700;
+        color: #fff;
+        padding: 3px;
+        background-color: rgb(18, 19, 19);
+        border-radius: 4px;
+        box-shadow: inset 0 -2px 0 rgb(30, 28, 31);
+    }
+    kbd kbd {
+        font-size: 100%;
+        padding: 0;
+        /*border-radius: 0;
+        background-color: transparent;*/
+        box-shadow: none;
+    }
+    pre {
+        font-size: 13px;
+        color: #333;
+        word-break: break-all;
+        word-wrap: break-word;
+        display: block;
+        padding: 10px;
+        overflow: auto;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #eee;
+    }
+    /*代码框y滚动轴*/
+    .pre-scrollable {
+        max-height: 350px;
+        overflow-y: scroll;
+    }
+
+    </style>
+</head>
+<body>
+    <div style="width: 80%;border: 2px solid #000;margin: 0 auto;padding:20px;">
+        <p>通过<code>&lt;code&gt;</code>标签包裹内联样式的代码片段。</p>
+        <p>通过<code>&lt;kbd&gt;</code>标签标记用户通过键盘输入的内容。</p>
+        <p>通过<kbd>shift</kbd>来切换中英文。</p>
+        <p>通过<kbd><kbd>ctrl</kbd> + <kbd>alt</kbd></kbd>来切换浏览器标签页。</p>
+    </div>
+</body>
+</html>
